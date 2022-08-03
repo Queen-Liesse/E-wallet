@@ -1,0 +1,184 @@
+body {
+  background-image: linear-gradient(to bottom, #000, #fff);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+.login-page {
+  width: 360px;
+  padding: 10% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 1;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4caf50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+}
+.form button:hover,
+.form button:active {
+  background: #43a047;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #555;
+  font-size: 12px;
+}
+.form .message a {
+  color: #4caf50;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+.xyz {
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 100px;
+  /* margin: 100px auto; */
+}
+.brand-container {
+  background: #eee;
+  width: 800px;
+  margin: 0 auto;
+  border-top: 3px solid blue;
+  border-bottom: 3px solid #43a047;
+  box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.915);
+  clip-path: polygon(16% 0, 100% 0, 90% 100%, 0% 100%);
+}
+.brand-container h1 {
+  text-align: center;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 255, 0.292),
+    rgb(2, 2, 37)
+  );
+}
+.account {
+  /* background: rgb(147, 31, 31); */
+  /* width: 800px; */
+
+  /* padding: 30px; */
+  display: flex;
+  /* flex-direction: column; */
+  /* align-items: center;
+  justify-content: center; */
+  gap: 10px;
+}
+.btn-container {
+  display: flex;
+  justify-content: space-around;
+  /* gap: 30px; */
+  width: 100%;
+  /* align-items: center;
+  justify-content: center; */
+}
+.btn:link,
+.btn:visited {
+  padding: 12px 32px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  font-size: 18px;
+}
+.btn-send:link,
+.btn-send:visited {
+  background: rgb(2, 2, 67);
+  transition: all 0.3s;
+}
+.btn-send:hover,
+.btn-send:active {
+  background: rgb(15, 15, 138);
+}
+.btn-receive:link,
+.btn-receive:visited {
+  background: #4caf50;
+  transition: all 0.3s;
+}
+.btn-receive:hover,
+.btn-receive:active {
+  background: #43a047;
+}
+.info {
+  /* background: red; */
+  display: flex;
+  gap: 0;
+  padding: 30px;
+  background: #eee;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.915);
+  /* background: red; */
+  flex-direction: column;
+  width: 100%;
+}
+.transation {
+  width: 100%;
+  display: flex;
+  padding: 0 30px;
+  flex-direction: column;
+  background: #eee;
+  justify-content: center;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.915);
+
+  gap: 30px;
+}
+.trans-titl {
+  /* background: blue; */
+  width: 100%;
+  /* padding: 30px; */
+  /* padding: 0px 30px; <input
+            type="number"
+            placeholder="type your money"
+            id="money"
+            name="money"
+          /> */
+
+  background-image: linear-gradient(to right, rgb(75, 75, 115), blue);
+  /* text-align: center; */
+  color: transparent;
+  -webkit-background-clip: text;
+  font-size: 28px;
+}
+input {
+  padding: 8px;
+  display: flex;
+
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.281);
+}
+.more-info {
+  /* background: green; */
+  padding: 0 50px;
+}
+p span {
+  font-weight: bold;
+}

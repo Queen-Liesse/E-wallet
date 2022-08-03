@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-wallet</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="xyz">
+      <div class="brand-container">
+        <h1>XYZ COMPANY</h1>
+      </div>
+      <div class="account">
+        <div class="info">
+          <h3 class="trans-titl">Transaction</h3>
+          <div class="more-info">
+            <p>Initial Amount: $<span id="initial">1000</span></p>
+            <p>Received: $<span id="receive">00</span></p>
+            <p>Send: $<span id="sends">0</span></p>
+            <p>Charge: $<span id="charge">0</span></p>
+            <p>total: $<span id="total">0</span></p>
+          </div>
+        </div>
+        <div class="transation">
+          <input
+            type="number"
+            placeholder="type your money"
+            id="money"
+            name="money"
+          />
+          <div class="btn-container">
+            <a
+              href="#"
+              class="btn btn-receive"
+              type="button"
+              value="submit"
+              onclick="receive()"
+              >receive</a
+            >
+            <a
+              href="#"
+              class="btn btn-send"
+              type="button"
+              value="submit"
+              onclick="send()"
+              >Send</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js" type="text/javascript"></script>
+  </body>
+</html>
