@@ -24,7 +24,7 @@ const signUp = (e) => {
   }
   e.preventDefault();
 };
-function signIn(e) {
+const signIn = (e) => {
   let email = document.getElementById("email").value,
     pwd = document.getElementById("pwd").value;
   let formData = JSON.parse(localStorage.getItem("formData")) || [];
@@ -32,8 +32,7 @@ function signIn(e) {
     formData.length &&
     JSON.parse(localStorage.getItem("formData")).some(
       (data) =>
-        data.email.toLowerCase() == email.toLowerCase() &&
-        data.pwd.toLowerCase() == pwd.toLowerCase()
+        data.email.toLowerCase() == email && data.pwd.toLowerCase() == pwd
     );
   console.log(exist);
 
@@ -43,7 +42,7 @@ function signIn(e) {
     location.href = "./account.html";
   }
   e.preventDefault();
-}
+};
 
 let balance = document.getElementById("initial");
 let receive = document.getElementById("receive");
