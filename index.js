@@ -1,46 +1,33 @@
 function send() {
   let amount = parseInt(document.getElementById("money").value);
   let money = 1000;
-  let answer = money - amount;
-  let charge = 0;
-  document.getElementById("total").innerHTML = answer;
-  document.getElementById("sends").innerHTML = amount;
-  if (amount > 100) {
+  let answer;
+  let charge;
+  // document.getElementById("total").innerHTML = answer;
+  // document.getElementById("sends").innerHTML = amount;
+  if (amount > money) {
+    alert("Nta mafaranga ufitemo ahagije yo gusoza icyo gikorwa");
+  } else if (amount >= 1 && amount < 10000) {
+    charge = 0;
+    answer = money - amount - charge;
+    document.getElementById("total").innerHTML = answer;
+    document.getElementById("initial").innerHTML = answer;
+    document.getElementById("charge").innerHTML = charge;
+  } else if (amount >= 10000 && amount < 100000) {
     charge = 200;
+    answer = money - amount - charge;
+    document.getElementById("total").innerHTML = answer;
+    document.getElementById("initial").innerHTML = answer;
+    document.getElementById("charge").innerHTML = charge;
+  } else if (amount >= 100000) {
+    charge = 1000;
     answer = money - amount - charge;
     document.getElementById("total").innerHTML = answer;
     document.getElementById("initial").innerHTML = answer;
     document.getElementById("charge").innerHTML = charge;
   }
 }
-/*
-function send() {
-  let amount = parseInt(document.getElementById("money").value);
-  let money = 1000;
-  let answer;
-  let charge;
 
-  if ((amount >= 1 && amount <= 10, 000)) {
-    charge = 0;
-    answer = money - amount - charge;
-    document.getElementById("total").innerHTML = answer;
-    // document.getElementById("initial").innerHTML = answer;
-    document.getElementById("charge").innerHTML = charge;
-  } else if ((amount > 10, 000 && amount <= 100000)) {
-    charge = 200;
-    answer = money - amount - charge;
-    document.getElementById("total").innerHTML = answer;
-    document.getElementById("sends").innerHTML = amount;
-  } else if (amount > 100000) {
-    charge = 1000;
-    answer = money - amount - charge;
-    document.getElementById("total").innerHTML = answer;
-    document.getElementById("sends").innerHTML = amount;
-  } else {
-    alert("nta amafaranga mufite yo gusoza icyo gikorwa");
-  }
-}
-*/
 function receive() {
   let amount = parseInt(document.getElementById("money").value);
   let money = 1000;
@@ -91,7 +78,7 @@ function signIn(e) {
   if (!exist) {
     alert("incorrect username or password");
   } else {
-    location.href = "/account.html";
+    location.href = "./account.html";
   }
   e.preventDefault();
 }
