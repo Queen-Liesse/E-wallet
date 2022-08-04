@@ -34,9 +34,8 @@ const signIn = (e) => {
       (data) =>
         data.email.toLowerCase() == email && data.pwd.toLowerCase() == pwd
     );
-  console.log(exist);
 
-  if (!exist) {
+  if (exist) {
     alert("incorrect username or password");
   } else {
     location.href = "./account.html";
