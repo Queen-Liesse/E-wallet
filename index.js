@@ -1,3 +1,50 @@
+$(".message a").click(function () {
+  $("form").animate({ height: "toggle", opacity: "toggle" }, "slow");
+});
+const signUp = (e) => {
+  let fname = document.getElementById("fname").value,
+    lname = document.getElementById("lname").value,
+    email = document.getElementById("email").value,
+    pwd = document.getElementById("pwd").value;
+  let formData = JSON.parse(localStorage.getItem("formData")) || [];
+  let exist =
+    formData.length &&
+    JSON.parse(localStorage.getItem("formData")).some(
+      (data) => data.email.toLowerCase() == email.toLowerCase()
+    );
+
+  if (!exist) {
+    formData.push({ fname, lname, email, pwd });
+    localStorage.setItem("formData", JSON.stringify(formData));
+    document.querySelector("form").reset();
+    document.getElementById("fname").focus();
+    alert(`account created`);
+  } else {
+    alert(`you already have an account`);
+  }
+  e.preventDefault();
+};
+function signIn(e) {
+  let email = document.getElementById("email").value,
+    pwd = document.getElementById("pwd").value;
+  let formData = JSON.parse(localStorage.getItem("formData")) || [];
+  let exist =
+    formData.length &&
+    JSON.parse(localStorage.getItem("formData")).some(
+      (data) =>
+        data.email.toLowerCase() == email.toLowerCase() &&
+        data.pwd.toLowerCase() == pwd.toLowerCase()
+    );
+  console.log(exist);
+
+  if (!exist) {
+    alert("incorrect username or password");
+  } else {
+    location.href = "./account.html";
+  }
+  e.preventDefault();
+}
+
 let balance = document.getElementById("initial");
 let receive = document.getElementById("receive");
 let send = document.getElementById("send");
@@ -46,49 +93,3 @@ sendBtn.addEventListener("click", () => {
     balance.innerText = balanceValue;
   }
 });
-
-$(".message a").click(function () {
-  $("form").animate({ height: "toggle", opacity: "toggle" }, "slow");
-});
-const signUp = (e) => {
-  let fname = document.getElementById("fname").value,
-    lname = document.getElementById("lname").value,
-    email = document.getElementById("email").value,
-    pwd = document.getElementById("pwd").value;
-  let formData = JSON.parse(localStorage.getItem("formData")) || [];
-  let exist =
-    formData.length &&
-    JSON.parse(localStorage.getItem("formData")).some(
-      (data) => data.email.toLowerCase() == email.toLowerCase()
-    );
-
-  if (!exist) {
-    formData.push({ fname, lname, email, pwd });
-    localStorage.setItem("formData", JSON.stringify(formData));
-    document.querySelector("form").reset();
-    document.getElementById("fname").focus();
-    alert(`account created`);
-  } else {
-    alert(`you already have an account`);
-  }
-  e.preventDefault();
-};
-function signIn(e) {
-  let email = document.getElementById("email").value,
-    pwd = document.getElementById("pwd").value;
-  let formData = JSON.parse(localStorage.getItem("formData")) || [];
-  let exist =
-    formData.length &&
-    JSON.parse(localStorage.getItem("formData")).some(
-      (data) =>
-        data.email.toLowerCase() == email.toLowerCase() &&
-        data.pwd.toLowerCase() == pwd.toLowerCase()
-    );
-
-  if (!exist) {
-    alert("incorrect username or password");
-  } else {
-    location.href = "./account.html";
-  }
-  e.preventDefault();
-}
