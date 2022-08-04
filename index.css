@@ -196,3 +196,44 @@ input {
 p span {
   font-weight: bold;
 }
+@media (max-width: 1200px) {
+  .xyz {
+    width: 100%;
+    padding: 10px 0;
+  }
+  .account {
+    gap: 10px;
+  }
+  .brand-container {
+    width: 90%;
+  }
+  .info {
+    width: 80%;
+  }
+  .transation {
+    position: relative;
+    width: 80%;
+    top: 0;
+    left: 0;
+  }
+}
+@media (max-width: 700px) {
+  .xyz {
+    padding: 10px 0px;
+  }
+  .info {
+    width: 80%;
+  }
+  .transation {
+    position: relative;
+    width: 80%;
+    top: 0;
+    left: 0;
+  }
+
+  .account {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+}
